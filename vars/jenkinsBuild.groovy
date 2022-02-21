@@ -19,28 +19,8 @@ environment {
 			steps {
 				  git branch: 'main', url: 'https://github.com/JevitaD/nodejs-k8s.git'
 			}
-		}	
-					
-		stage('BUILD IMAGE') { 
-			 steps { 
-				 script { 
-					 dockerImage = docker.build('"$registry:$dockerTag"') 
-				 }
-			} 
 		}
-					
-		stage('PUSH HUB') { 
-			 steps { 
-				 script { 
-					 docker.withRegistry( '', "$registryCredential" ) { 
-						 dockerImage.push() 
-					}
-				}		
-			} 
-		}
-					
 	}
-			  
-}
+}								  
 
 }
