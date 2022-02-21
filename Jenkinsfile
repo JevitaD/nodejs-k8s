@@ -39,15 +39,8 @@ environment {
 			} 
 		}
 					
-		stage('DEPLOY IMAGE') {
-			steps {
-				script { 
-					 docker.withRegistry( '', registryCredential ) { 
-						 dockerImage.run('-it --name "$containerName-$dockerTag"') 
-					}
-				} 
-			}
-		}
+		
+		
 	}
 			  
 }
