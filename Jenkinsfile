@@ -1,4 +1,4 @@
-def call(String registryCred = 'a', String registryin = 'a', String docTag = 'a', String contName = 'a', String grepo = 'a', String gbranch = 'a', String gitcred = 'a') {
+def call(String registryCred = 'a', String registryin = 'a', String docTag = 'a', String contName = 'a') {
 
 pipeline {
 environment { 
@@ -17,7 +17,7 @@ environment {
 	stages {
 		stage("POLL SCM"){
 			steps {
-				 git branch: 'main', url: 'https://github.com/JevitaD/nodejs-k8s.git'
+				  git branch: 'main', url: 'https://github.com/JevitaD/nodejs-k8s.git'
 			}
 		}	
 					
@@ -39,8 +39,6 @@ environment {
 			} 
 		}
 					
-		
-		
 	}
 			  
 }
