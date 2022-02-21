@@ -8,7 +8,7 @@ environment {
 		containerName = "${contName}"
 	}
 		
-	agent { label 'docker' }
+	agent { label 'dockerlabel' }
 	
 	triggers {
 		pollSCM '* * * * *'
